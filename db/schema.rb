@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 20150829120762) do
   add_index "discussions", ["product_id"], name: "index_discussions_on_product_id", using: :btree
   add_index "discussions", ["user_id"], name: "index_discussions_on_user_id", using: :btree
 
+  create_table "messages", force: :cascade do |t|
+    t.integer  "discussion_id"
+    t.text     "content"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "messages", ["discussion_id"], name: "index_messages_on_discussion_id", using: :btree
+
   create_table "product_users", force: :cascade do |t|
     t.integer  "product_id"
     t.datetime "created_at", null: false
@@ -93,6 +102,7 @@ ActiveRecord::Schema.define(version: 20150829120762) do
 
   add_foreign_key "discussions", "products"
   add_foreign_key "discussions", "users"
+  add_foreign_key "messages", "discussions"
   add_foreign_key "product_users", "products"
   add_foreign_key "product_users", "users"
   add_foreign_key "products", "categories"
