@@ -10,9 +10,9 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li
-          %a{:href => "#"} Make a Question
+          = link_to 'Make a Question', discussions_new_path
         %li
-          %a{:href => "#"}
+          = link_to discussions_mine_path do
             Questions to me
             %span.label.label-danger.label-as-badge 3
       %ul.nav.navbar-nav.navbar-right

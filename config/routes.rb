@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'discussions/new'
+  get 'discussions/mine'
+
   devise_for :users
   get 'visitors/index'
 
