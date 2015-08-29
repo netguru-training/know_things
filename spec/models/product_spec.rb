@@ -12,5 +12,6 @@ RSpec.describe Product do
 
   describe 'associations' do
     it { is_expected.to have_many :product_users }
+    it { is_expected.to have_many :discussions }
   end
 end
