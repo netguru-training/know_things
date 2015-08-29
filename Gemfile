@@ -17,6 +17,7 @@ gem 'activerecord-import'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'savon', '~> 2.0'
 gem 'simple_form'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'pry-rails'
