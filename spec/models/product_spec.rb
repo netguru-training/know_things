@@ -5,4 +5,8 @@ RSpec.describe Product do
     it { should have_db_column :name }
     it { should have_db_column :description }
   end
+
+  describe 'validations' do
+    it { is_expected.to validate_presence_of :name }
+  end
 end
