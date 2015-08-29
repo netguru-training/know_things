@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'turbolinks'
 gem 'erb2haml'
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 
 group :development, :test do
   gem 'byebug'
