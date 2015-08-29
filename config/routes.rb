@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'discussions/new'
   get 'discussions/mine'
 
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'registrations'}
   get 'visitors/index'
   resources :categories, only: :index
   # The priority is based upon order of creation: first created -> highest priority.
