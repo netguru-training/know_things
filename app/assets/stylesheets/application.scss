@@ -5,5 +5,17 @@
 
 body {
   padding-top: 60px;
-  padding-left: 30px;
+}
+
+main {
+  @extend .container;
+  padding-bottom: 30px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0;
+
+  .container {
+    padding-top: 50px;
+    padding-left: 30px;
+  }
 }
