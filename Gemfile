@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'turbolinks'
 gem 'erb2haml'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug'
