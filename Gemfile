@@ -19,3 +19,11 @@ end
 
 group :development do
 end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+end
