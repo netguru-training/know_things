@@ -16,4 +16,10 @@ RSpec.describe Discussion do
     it { is_expected.to belong_to :user }
     it { is_expected.to have_many :messages }
   end
+
+  describe 'public instance methods' do
+    context 'responds to its methods' do
+      it { is_expected.to respond_to(:question) }
+    end
+  end
 end
