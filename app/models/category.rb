@@ -5,5 +5,5 @@ class Category < ActiveRecord::Base
 
   validates :parent_id, :name, presence: true
 
-  scope :main_category, ->  { where 'parent_id = ?', 0 }
+  scope :main_categories, ->  { where 'parent_id = ?', 0 }
 end
