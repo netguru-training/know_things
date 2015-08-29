@@ -8,7 +8,7 @@ deploy:
   provider: heroku
   api_key:
     secure: OZla14NXR085zUcCnuq5HNPBIMJhEnEUngooAGcRqAt09Xxirwh7c+77agsQlDRcU/dUj8ppYbLHrkDgnwnmBJ7z90UVqPBUKy/heKEBeTnvHuphRJnGyA3PQJBpPRrpM4Xq1QDt58rJaTLUWNWw6SPUUwzWxrX3HuXfD40oiKZuktVKpA7KzSCnfLOQHdDJdG2Bo74LH73HE21ke8s3BgilqR+flLdJoWdH/Uuw7OlgY780zQtOdJg/vZolBNtVKcnD5ZfkbYdHRjF2Treckce00R6jQJzrGwcuOKqF3zar1SUC5Pg/NTHAhUcFD1vsu84sNW1AdbIAgmDYlxvlUhYHGVcdaxq0kGH9pQPfxwUTjr1U02ZVR7R8WILxOKXL19I36yULtQBX9VeQnX9hUMul8d77K79KLaiZrvXdLTyeFSzPULnVYK+zT28mKVeDfReMsBMnI4Vey9gbOcLqaX/YPleNuAuf+KlgrWtn9yDMcvF111fqquLkKR1ij9e2teZ3Dw+bR1ZHJb9jwmvo0j8TizFnTJVBO2/TylraxJdk7xUBuPL+xrTJFQ0hPgVvXK2CuOSBQH7KisMfvdmoNB74KQKkAUCxu9O9V1Wgaq8/HdzQ+vkC7rJTYtYJGJnKqi8vTeYK2urPQMLUXUvqYPU4pSwVYh5CyVcWHIW2qM0=
-  app: know_things
+  app: know-things
   on:
     repo: netguru-training/know_things
   run: "rake db:migrate"
