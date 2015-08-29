@@ -20,6 +20,7 @@ gem 'savon', '~> 2.0'
 gem 'simple_form'
 gem 'rails_12factor', group: :production
 gem 'devise'
+gem "select2-rails"
 
 group :development, :test do
   gem 'pry-rails'
