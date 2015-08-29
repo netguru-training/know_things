@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Product do
   describe 'database columns' do
-    it { should have_db_column :name }
-    it { should have_db_column :description }
+    it { is_expected.to have_db_column :name }
+    it { is_expected.to have_db_column :description }
   end
 
   describe 'validations' do
