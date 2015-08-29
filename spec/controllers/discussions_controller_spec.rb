@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe DiscussionsController, type: :controller do
+  let(:user) { FactoryGirl.create(:user) }
+
+  before { sign_in user }
 
   describe "GET #new" do
     it "returns http success" do
