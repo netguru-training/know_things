@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 gem 'rails', '4.2.4'
 gem 'pg'
@@ -18,6 +19,7 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'savon', '~> 2.0'
 gem 'simple_form'
 gem 'rails_12factor', group: :production
+gem 'devise'
 
 group :development, :test do
   gem 'pry-rails'
@@ -26,7 +28,6 @@ group :development, :test do
   gem 'spring'
   gem 'web-console', '~> 2.0'
   gem 'faker'
-  gem 'devise'
 end
 
 group :development do
