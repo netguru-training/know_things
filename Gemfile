@@ -14,6 +14,7 @@ gem 'erb2haml'
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'activerecord-import'
+gem 'acts-as-taggable-on', '~> 3.4'
 gem 'savon', '~> 2.0'
 
 group :development, :test do
