@@ -22,13 +22,23 @@ namespace :allegro do
                                                            localVersion: 0,
                                                            webapiKey: WEBAPI_KEY })
 
+    fetched_categories = categories_response.body[:do_get_cats_data_response][:cats_list][:item]
     categories = []
-    categories_response.body[:do_get_cats_data_response][:cats_list][:item].each do |category|
+
+    parent_ids = fetched_categories.map do |category|
+      category[:cat_id] if category[:cat_parent] == '0'
+    end.compact
+
+    first_and_second_lvl_cat_ids = ['0', parent_ids].flatten
+    fetched_categories.each do |category|
+      next if first_and_second_lvl_cat_ids.exclude? category[:cat_parent]
       categories << Category.new(
-          id: category[:cat_id],
-          parent_id: category[:cat_parent],
-          name: category[:cat_name])
+        id: category[:cat_id],
+        parent_id: category[:cat_parent],
+        name: category[:cat_name]
+      )
     end
+
     Category.import categories
   end
 
