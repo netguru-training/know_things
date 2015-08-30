@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'visitors/index'
   resources :categories, only: :index
   resources :discussions, only: [:index, :new, :create, :show]
+  resources :messages, only: [:new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
