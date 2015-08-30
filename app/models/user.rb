@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :product_users
   has_many :products, through: :product_users
+  has_many :messages
 end
