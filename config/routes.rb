@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
   get 'products/add'
   get 'products/get_list'
-
-  get 'discussions/new'
   get 'discussions/mine'
-  get 'discussions/index'
-
   devise_for :users, controllers: {registrations: 'registrations'}
   get 'visitors/index'
   resources :categories, only: :index
+  resources :discussions, only: [:index, :new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
