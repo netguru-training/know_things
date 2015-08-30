@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
 
   def get_list
     respond_to do |format|
-      format.json { render json: { results: Product.all } }
+      format.json { render json: Product.where('name ILIKE ?', "#{params[:q]}%").all }
     end
   end
 end
