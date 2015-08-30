@@ -1,7 +1,8 @@
 var ready = function() {
     function showSubcategories(mainCategoryName) {
-        $('.sub-categories>div').fadeOut();
-        $('#' + mainCategoryName).fadeIn();
+        $('.sub-categories>div').fadeOut().promise().done(function() {
+            $('#' + mainCategoryName).fadeIn();
+        });
     }
 
     $('.main-categories>a').click(function() {
