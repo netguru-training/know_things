@@ -2,6 +2,7 @@ class DiscussionsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :index]
 
   def index
+    @discussions = Discussion.all
   end
 
   def new

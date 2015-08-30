@@ -1,2 +1,5 @@
-%h1 Discussions#index
-%p Find me in app/views/discussions/index.html.haml
+%h1 Discussions
+.col-md-12
+  .questions
+    - @discussions.each do |discussion|
+      = render partial: 'discussion', object: discussion
