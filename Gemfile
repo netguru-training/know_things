@@ -32,6 +32,9 @@ group :development, :test do
 end
 
 group :development do
+  gem 'erd'
+  gem 'annotate'
+  gem 'better_errors'
 end
 
 group :test do
