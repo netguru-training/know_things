@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'discussions/new'
   get 'discussions/mine'
+  get 'discussions/index'
 
   devise_for :users, controllers: {registrations: 'registrations'}
   get 'visitors/index'

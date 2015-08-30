@@ -1,10 +1,13 @@
 class DiscussionsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :index]
 
   def new
   end
 
   def mine
+  end
+
+  def index
   end
 
   private
