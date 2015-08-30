@@ -24,4 +24,5 @@ $ ->
           text: term
         }
       return
-
+  $('#product_id').on 'change', ->
+    $('#user_product_id').val($(this).val())
