@@ -1,0 +1,5 @@
+%h1 Discussion
+.col-md-12
+  = render partial: 'message', object: discussion.question, locals: { class_name: 'question' }
+  - discussion.messages.drop(1).each do |message|
+    = render partial: 'message', object: message, locals: { class_name: 'message' }

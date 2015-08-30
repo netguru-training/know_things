@@ -1,5 +1,4 @@
 %h1 Discussions
 .col-md-12
-  .questions
-    - discussions.each do |discussion|
-      = render partial: 'discussion', object: discussion
+  - discussions.each do |discussion|
+    = render partial: 'discussion', object: discussion
