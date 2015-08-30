@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: discussions
+#
+#  id         :integer          not null, primary key
+#  product_id :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  user_id    :integer
+#
+
 class Discussion < ActiveRecord::Base
   acts_as_taggable
 
