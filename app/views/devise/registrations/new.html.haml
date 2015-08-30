@@ -6,17 +6,6 @@
       = f.input :email
       = f.input :password
       = f.input :password_confirmation
-      %table
-        %tr
-          %td
-            .button
-              = f.button :button,  '+'
-          %td
-            .select_category
-              = f.input :categories, collection: @categories, as: :fake, label: false
-          %td
-            .select_product
-              = f.input :product_ids, collection: @products, as: :grouped_select, group_method: :products, label: false, input_html: { style: 'width: 200px' }
     .form-actions
       = f.button :submit, "Sign up"
   = render "devise/shared/links"
