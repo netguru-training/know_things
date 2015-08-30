@@ -11,4 +11,4 @@ deploy:
   app: know-things
   on:
     repo: netguru-training/know_things
-  run: "rake db:migrate"
+  run: "rake db:migrate db:seed"
