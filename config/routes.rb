@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations'}
   get 'visitors/index'
   resources :categories, only: :index
-  resources :discussions, only: [:index, :new, :create]
+  resources :discussions, only: [:index, :new, :create, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
