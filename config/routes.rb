@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get 'products/get_list'
   post 'products/create'
 
-  get 'discussions/new'
   get 'discussions/mine'
   devise_for :users, controllers: {registrations: 'registrations'}
   get 'visitors/index'
