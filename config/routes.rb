@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'products/add'
+
   get 'discussions/new'
   get 'discussions/mine'
   get 'discussions/index'
