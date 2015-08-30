@@ -1,11 +1,11 @@
 %h1 Categories
 .col-md-6
   .main-categories
-    - @categories.each do |category|
+    - categories.each do |category|
       = render partial: 'category', object: category
 .col-md-6
   .sub-categories
-    - @categories.each do |category|
+    - categories.each do |category|
       .sub-category{ id: category.name.parameterize }
         - category.subcategories.each do |subcategory|
           = render partial: 'subcategory', object: subcategory

@@ -1,19 +1,8 @@
 class DiscussionsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :index]
 
-  def index
-    @discussions = Discussion.all
-  end
-
-  def new
-    @discussion = Discussion.new
-  end
-
-  def create
-  end
-
-  def mine
-  end
+  expose(:discussions)
+  expose(:discussion)
 
   private
   def discussion_params

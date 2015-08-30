@@ -18,9 +18,10 @@ gem 'activerecord-import'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'savon', '~> 2.0'
 gem 'simple_form'
+gem 'decent_exposure'
 gem 'rails_12factor', group: :production
 gem 'devise'
-gem "select2-rails"
+gem 'select2-rails'
 
 group :development, :test do
   gem 'pry-rails'
