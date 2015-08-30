@@ -19,6 +19,8 @@ class Discussion < ActiveRecord::Base
 
   has_many :messages
 
+  accepts_nested_attributes_for :messages
+
   def question
     messages.first
   end
