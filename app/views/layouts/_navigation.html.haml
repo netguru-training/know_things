@@ -17,9 +17,9 @@
               Questions to me
               %span.label.label-danger.label-as-badge 3
         %ul.nav.navbar-nav.navbar-right
-          %form.navbar-form.navbar-left{:role => "search"}
+          %form.navbar-form.navbar-left{role: "search"}
             .form-group
-              %input.form-control{:placeholder => "Search", :type => "text"}/
+              %input.form-control{placeholder: "Search", type: "text"}/
           %li
             = link_to 'Logout', destroy_user_session_path, method: :delete
       - else

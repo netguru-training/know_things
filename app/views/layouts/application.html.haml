@@ -8,6 +8,7 @@
   %body
     = render 'layouts/navigation'
     %main
-      = render 'layouts/messages'
-      .container
-        = yield
+      .col-lg-12
+        = render 'layouts/messages'
+        .container
+          = yield
