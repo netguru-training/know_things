@@ -1,6 +1,13 @@
-= form_tag(products_create_path, method: :post) do
-  %button{:type => "button", id: 'js_add_product'} +
-  = grouped_collection_select(:subcategory, :parent_id, @category, :subcategories, :name, :id, :name)
-  #product_id
-  = hidden_field(:user, :product_id)
-  = submit_tag 'Create'
+= form_tag(products_create_path, method: :post, class: 'js-add-product-form' ) do
+  %button.btn.btn-large.btn-success{:type => "button", id: 'js_add_product'} +
+  .js-product-selector
+    %br
+    = grouped_collection_select(:subcategory, :parent_id, @category, :subcategories, :name, :id, :name, {}, { class: 'subcategory_parent_id' } )
+    %br
+    .product_id
+    %br
+
+  .js-moar-products
+
+  %br
+  %button.btn.btn-large.btn-success{ type: "submit" } Save
