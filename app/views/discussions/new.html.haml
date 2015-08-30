@@ -1,2 +1,6 @@
-%h1 Discussions#new
-%p Find me in app/views/discussions/new.html.haml
+%h1 Ask a question
+.col-md-6
+  = simple_form_for @discussion do |f|
+    = f.input :product_id, collection: Product.all, required: true
+    = f.input :question, as: :text
+    = f.button :submit, 'Ask question'
