@@ -1,2 +1,4 @@
-%h1 Products#add
-%p Find me in app/views/products/add.html.haml
+= form_tag(products_add_path, method: :post) do
+  %button{:type => "button"} Cancel changes
+  = grouped_collection_select(:subcategory, :parent_id, @category, :subcategories, :name, :id, :name)
+  #product_id
