@@ -1,6 +1,7 @@
 %h1 Ask a question
 .col-md-6
   = simple_form_for discussion do |f|
-    = f.input :product_id, collection: Product.all, required: true
-    = f.input :question, as: :text
+    = f.input :product_id, collection: Product.all
+      = f.simple_fields_for :messages, disqussion.messages.build do |m|
+        = m.input :content
     = f.button :submit, 'Ask question'
