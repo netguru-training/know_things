@@ -5,6 +5,7 @@ class DiscussionsController < ApplicationController
   end
 
   def new
+    @discussion = Discussion.new
   end
 
   def create
@@ -15,6 +16,6 @@ class DiscussionsController < ApplicationController
 
   private
   def discussion_params
-    params.require(:discussion).permit(:tag_list)
+    params.require(:discussion).permit(:tag_list, :question, :product_id)
   end
 end
