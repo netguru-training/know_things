@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'products/add'
+  get 'products/get_list'
 
   get 'discussions/new'
   get 'discussions/mine'
