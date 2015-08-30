@@ -6,6 +6,6 @@
 .col-md-6
   .sub-categories
     - @categories.each do |category|
-      .sub-category.hide{ id: category.name.parameterize }
+      .sub-category{ id: category.name.parameterize }
         - category.subcategories.each do |subcategory|
           = render partial: 'subcategory', object: subcategory
