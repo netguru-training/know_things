@@ -1,4 +1,6 @@
-= form_tag(products_add_path, method: :post) do
-  %button{:type => "button"} Cancel changes
+= form_tag(products_create_path, method: :post) do
+  %button{:type => "button", id: 'js_add_product'} +
   = grouped_collection_select(:subcategory, :parent_id, @category, :subcategories, :name, :id, :name)
   #product_id
+  = hidden_field(:user, :product_id)
+  = submit_tag 'Create'
